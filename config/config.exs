@@ -2,6 +2,12 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
+config :sbanken_monitor,
+  client_id: System.get_env("SBANKEN_CLIENT_ID"),
+  password: System.get_env("SBANKEN_PASSWORD"),
+  slack_url: System.get_env("SLACK_URL"),
+  customer_id: System.get_env("CUSTOMER_ID")
+
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
 # file won't be loaded nor affect the parent project. For this reason,
