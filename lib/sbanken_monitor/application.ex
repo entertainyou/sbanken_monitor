@@ -9,7 +9,7 @@ defmodule SbankenMonitor.Application do
     # List all child processes to be supervised
     children = [
       # Starts a worker by calling: SbankenMonitor.Worker.start_link(arg)
-      # {SbankenMonitor.Worker, arg},
+      {SbankenMonitor.Worker, []},
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
