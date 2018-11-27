@@ -3,6 +3,9 @@ elixir:
 - 1.7.2
 otp_release:
 - 21.1.3
+script:
+- mix test
+- MIX_ENV=prod mix release
 before_deploy:
 - openssl aes-256-cbc -K $encrypted_a77158a5a442_key -iv $encrypted_a77158a5a442_iv
   -in travis_rsa.enc -out /tmp/travis_rsa -d
