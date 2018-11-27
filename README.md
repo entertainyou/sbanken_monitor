@@ -1,5 +1,7 @@
 # SbankenMonitor
 
+[![Build Status](https://travis-ci.org/entertainyou/sbanken_monitor.svg?branch=master)](https://travis-ci.org/entertainyou/sbanken_monitor)
+
 **TODO: Add description**
 
 ## Installation
