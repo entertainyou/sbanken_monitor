@@ -8,6 +8,7 @@ before_deploy:
   -in travis_rsa.enc -out /tmp/travis_rsa -d
 - chmod 600 /tmp/travis_rsa
 deploy:
+  skip_cleanup: true
   provider: script
   script: bash scripts/deploy.sh
   on:
