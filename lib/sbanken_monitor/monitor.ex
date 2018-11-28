@@ -7,6 +7,7 @@ defmodule SbankenMonitor.Monitor do
   @monitor_interval 1 |> Duration.from_minutes() |> Duration.to_milliseconds(truncate: true)
 
   defmodule State do
+    @moduledoc false
     defstruct transactions: MapSet.new()
   end
 

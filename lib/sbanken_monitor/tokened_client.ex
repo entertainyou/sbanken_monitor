@@ -1,10 +1,12 @@
 defmodule SbankenMonitor.TokenedClient do
+  @moduledoc false
   alias Timex.Duration
   alias SbankenMonitor.Client
 
   @interval 50 |> Duration.from_minutes() |> Duration.to_milliseconds(truncate: true)
 
   defmodule State do
+    @moduledoc false
     defstruct client: nil, customer_id: Application.get_env(:sbanken_monitor, :customer_id)
   end
 
