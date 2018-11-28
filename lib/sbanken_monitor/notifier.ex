@@ -26,7 +26,7 @@ defmodule SbankenMonitor.Notifier do
 
     if DateTime.diff(now, accounting) < @notify_threshold do
       IO.puts("#{inspect({account, transaction})}")
-      text = "New transaction #{text} #{amount} @ #{accountingDate}"
+      text = "New transaction #{text} #{amount} @ #{accounting_date}"
 
       SbankenMonitor.Slack.send_message(%{
         text: text
