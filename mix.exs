@@ -27,7 +27,8 @@ defmodule SbankenMonitor.MixProject do
       {:tesla, "~> 1.1"},
       {:jason, "~> 1.1"},
       {:timex, "~> 3.3"},
-      {:distillery, "~> 2.0"}
+      {:distillery, "~> 2.0"},
+      {:credo, "~> 1.0"}
     ]
   end
 end
