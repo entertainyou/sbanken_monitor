@@ -7,7 +7,8 @@ defmodule SbankenMonitor.MixProject do
       version: "0.1.0",
       elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      aliases: aliases()
     ]
   end
 
@@ -27,7 +28,14 @@ defmodule SbankenMonitor.MixProject do
       {:tesla, "~> 1.1"},
       {:jason, "~> 1.1"},
       {:timex, "~> 3.3"},
-      {:distillery, "~> 2.0"}
+      {:distillery, "~> 2.0"},
+      {:credo, "~> 1.0"}
+    ]
+  end
+
+  def aliases() do
+    [
+      test: "test --no-start"
     ]
   end
 end

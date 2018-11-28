@@ -1,7 +1,9 @@
 %{
   "artificery": {:hex, :artificery, "0.2.6", "f602909757263f7897130cbd006b0e40514a541b148d366ad65b89236b93497a", [:mix], [], "hexpm"},
+  "bunt": {:hex, :bunt, "0.2.0", "951c6e801e8b1d2cbe58ebbd3e616a869061ddadcc4863d0a2182541acae9a38", [:mix], [], "hexpm"},
   "certifi": {:hex, :certifi, "2.4.2", "75424ff0f3baaccfd34b1214184b6ef616d89e420b258bb0a5ea7d7bc628f7f0", [:rebar3], [{:parse_trans, "~>3.3", [hex: :parse_trans, repo: "hexpm", optional: false]}], "hexpm"},
   "combine": {:hex, :combine, "0.10.0", "eff8224eeb56498a2af13011d142c5e7997a80c8f5b97c499f84c841032e429f", [:mix], [], "hexpm"},
+  "credo": {:hex, :credo, "1.0.0", "aaa40fdd0543a0cf8080e8c5949d8c25f0a24e4fc8c1d83d06c388f5e5e0ea42", [:mix], [{:bunt, "~> 0.2.0", [hex: :bunt, repo: "hexpm", optional: false]}, {:jason, "~> 1.0", [hex: :jason, repo: "hexpm", optional: false]}], "hexpm"},
   "distillery": {:hex, :distillery, "2.0.12", "6e78fe042df82610ac3fa50bd7d2d8190ad287d120d3cd1682d83a44e8b34dfb", [:mix], [{:artificery, "~> 0.2", [hex: :artificery, repo: "hexpm", optional: false]}], "hexpm"},
   "gettext": {:hex, :gettext, "0.16.1", "e2130b25eebcbe02bb343b119a07ae2c7e28bd4b146c4a154da2ffb2b3507af2", [:mix], [], "hexpm"},
   "hackney": {:hex, :hackney, "1.14.3", "b5f6f5dcc4f1fba340762738759209e21914516df6be440d85772542d4a5e412", [:rebar3], [{:certifi, "2.4.2", [hex: :certifi, repo: "hexpm", optional: false]}, {:idna, "6.0.0", [hex: :idna, repo: "hexpm", optional: false]}, {:metrics, "1.0.1", [hex: :metrics, repo: "hexpm", optional: false]}, {:mimerl, "1.0.2", [hex: :mimerl, repo: "hexpm", optional: false]}, {:ssl_verify_fun, "1.1.4", [hex: :ssl_verify_fun, repo: "hexpm", optional: false]}], "hexpm"},

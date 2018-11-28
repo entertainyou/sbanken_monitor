@@ -1,4 +1,5 @@
 defmodule SbankenMonitor.Balance do
+  @moduledoc false
   alias Timex.Duration
   alias SbankenMonitor.TokenedClient
   alias SbankenMonitor.Slack
@@ -6,6 +7,7 @@ defmodule SbankenMonitor.Balance do
   @interval 1 |> Duration.from_days() |> Duration.to_milliseconds(truncate: true)
 
   defmodule State do
+    @moduledoc false
     defstruct foo: nil
   end
 

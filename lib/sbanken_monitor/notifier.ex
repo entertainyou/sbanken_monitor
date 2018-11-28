@@ -19,14 +19,14 @@ defmodule SbankenMonitor.Notifier do
   end
 
   def handle_cast({:notify, {account, transaction} = record}, {records}) do
-    %{"amount" => amount, "text" => text, "accountingDate" => accountingDate} = transaction
+    %{"amount" => amount, "text" => text, "accountingDate" => accounting_date} = transaction
 
     now = DateTime.utc_now()
-    {:ok, accounting, _offset} = DateTime.from_iso8601(accountingDate)
+    {:ok, accounting, _offset} = DateTime.from_iso8601(accounting_date)
 
     if DateTime.diff(now, accounting) < @notify_threshold do
-      IO.inspect({account, transaction})
-      text = "New transaction #{text} #{amount} @ #{accountingDate}"
+      IO.puts("#{inspect({account, transaction})}")
+      text = "New transaction #{text} #{amount} @ #{accounting_date}"
 
       SbankenMonitor.Slack.send_message(%{
         text: text
@@ -34,7 +34,7 @@ defmodule SbankenMonitor.Notifier do
 
       {:noreply, {records}}
     else
-      IO.puts("Found old record #{text} #{amount} @ #{accountingDate}")
+      IO.puts("Found old record #{text} #{amount} @ #{accounting_date}")
       {:noreply, {[record | records]}}
     end
   end

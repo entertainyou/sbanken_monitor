@@ -1,4 +1,5 @@
 defmodule SbankenMonitor.Agent do
+  @moduledoc false
   defmacro __using__(opts) do
     interval = Keyword.get(opts, :interval)
     immediate = Keyword.get(opts, :immediate, false)

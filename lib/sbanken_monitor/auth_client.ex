@@ -6,7 +6,11 @@ defmodule SbankenMonitor.AuthClient do
   @client_id Application.get_env(:sbanken_monitor, :client_id)
   @password Application.get_env(:sbanken_monitor, :password)
 
-  plug(Tesla.Middleware.BasicAuth, username: encode_uri_component(@client_id), password: encode_uri_component(@password))
+  plug(Tesla.Middleware.BasicAuth,
+    username: encode_uri_component(@client_id),
+    password: encode_uri_component(@password)
+  )
+
   plug(Tesla.Middleware.BaseUrl, "https://auth.sbanken.no")
 
   plug(Tesla.Middleware.FormUrlencoded)
