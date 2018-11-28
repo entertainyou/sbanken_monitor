@@ -11,7 +11,7 @@ defmodule SbankenMonitor.Client do
     {:ok, result} = SbankenMonitor.AuthClient.get_access_token()
     access_token = Map.fetch!(result.body, "access_token")
 
-    Tesla.build_client([
+    Tesla.client([
       {
         Tesla.Middleware.Headers,
         [{"Authorization", "Bearer #{access_token}"}, {"customerId", customer_id}]
