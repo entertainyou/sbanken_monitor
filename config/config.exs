@@ -8,6 +8,10 @@ config :sbanken_monitor,
   slack_url: System.get_env("SLACK_URL"),
   customer_id: System.get_env("CUSTOMER_ID")
 
+config :sentry, dsn: System.get_env("SENTRY_DSN"),
+   included_environments: [:prod],
+   environment_name: Mix.env
+
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
 # file won't be loaded nor affect the parent project. For this reason,

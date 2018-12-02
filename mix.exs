@@ -30,6 +30,7 @@ defmodule SbankenMonitor.MixProject do
       {:timex, "~> 3.3"},
       {:distillery, "~> 2.0"},
       {:credo, "~> 1.0"}
+      {:sentry, "~> 7.0"},
     ]
   end
 
