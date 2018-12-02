@@ -8,10 +8,11 @@ config :sbanken_monitor,
   slack_url: System.get_env("SLACK_URL"),
   customer_id: System.get_env("CUSTOMER_ID")
 
-config :sentry, dsn: System.get_env("SENTRY_DSN"),
-   included_environments: [:prod],
-   environment_name: Mix.env,
-   release: System.get_env("TRAVIS_COMMIT")
+config :sentry,
+  dsn: System.get_env("SENTRY_DSN"),
+  included_environments: [:prod],
+  environment_name: Mix.env(),
+  release: System.get_env("TRAVIS_COMMIT")
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
