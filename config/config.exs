@@ -10,7 +10,8 @@ config :sbanken_monitor,
 
 config :sentry, dsn: System.get_env("SENTRY_DSN"),
    included_environments: [:prod],
-   environment_name: Mix.env
+   environment_name: Mix.env,
+   release: System.get_env("TRAVIS_COMMIT")
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
