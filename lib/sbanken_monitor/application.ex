@@ -12,7 +12,8 @@ defmodule SbankenMonitor.Application do
       {SbankenMonitor.TokenedClient, []},
       {SbankenMonitor.Notifier, []},
       {SbankenMonitor.Monitor, []},
-      {SbankenMonitor.Balance, []}
+      {SbankenMonitor.Balance, []},
+      {SbankenMonitor.HealthChecks, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

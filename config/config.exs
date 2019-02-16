@@ -6,7 +6,8 @@ config :sbanken_monitor,
   client_id: System.get_env("SBANKEN_CLIENT_ID"),
   password: System.get_env("SBANKEN_PASSWORD"),
   slack_url: System.get_env("SLACK_URL"),
-  customer_id: System.get_env("CUSTOMER_ID")
+  customer_id: System.get_env("CUSTOMER_ID"),
+  heartbeat_url: System.get_env("HEARTBEAT_URL")
 
 config :sentry,
   dsn: System.get_env("SENTRY_DSN"),
