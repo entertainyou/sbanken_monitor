@@ -1,9 +1,11 @@
 defmodule SbankenMonitor.HealthChecks do
-  alias Timex.Duration 
+  @moduledoc false
+  alias Timex.Duration
   @interval 1 |> Duration.from_minutes() |> Duration.to_milliseconds(truncate: true)
   @heartbeat_url Application.get_env(:sbanken_monitor, :heartbeat_url)
 
   defmodule State do
+    @moduledoc false
     defstruct foo: nil
   end
 
